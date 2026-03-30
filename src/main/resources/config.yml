@@ -1,0 +1,45 @@
+enabled: false
+dry-run: true
+interval-seconds: 300
+
+provider:
+  type: mysql
+
+limits:
+  max-updates-per-cycle: 200
+  max-write-lands-per-cycle: 10
+
+registry:
+  file: base-max-registry.yml
+
+audit:
+  enabled: true
+  file-prefix: bridge-audit
+
+lands:
+  whitelist: []
+
+database:
+  enabled: false
+  host: 127.0.0.1
+  port: 3306
+  name: lands1w2
+  user: root
+  password: change-me
+  table-prefix: lands1w2
+  pool-size: 2
+  connection-timeout-ms: 5000
+
+server-guard:
+  enabled: false
+  require-master: true
+  lands-server-name-file: ../Lands/server-name.yml
+
+runtime:
+  intercept-rental-blocks: true
+  save-and-publish-to-redis: true
+  deny-when-snapshot-missing: true
+  repair-tenant-on-renewal: true
+  repair-tenant-before-trust-command: true
+  audit-file-suffix: runtime
+  message-prefix: "&a[\u623f\u4ea7]&r "

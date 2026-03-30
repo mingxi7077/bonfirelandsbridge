@@ -1,0 +1,5 @@
+﻿bonfirelandsbridge 当前最新文档
+1. 生产排障手册: bonfirelandsbridge_生产排障手册_v0.2.4_2026-03-07.md
+2. 玩家更新日志: bonfirelandsbridge_玩家更新日志_v0.2.4_2026-03-07.md
+3. 查询功能任务清单: bonfirelandsbridge_后续任务清单_查询功能_2026-03-07.md
+4. 当前部署包: 部署包\bonfirelandsbridge_可直接拖入plugins_2026-03-07_v0.2.4

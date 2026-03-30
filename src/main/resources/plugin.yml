@@ -1,0 +1,22 @@
+name: bonfirelandsbridge
+version: '${project.version}'
+main: com.bonfire.landsbridge.BonfireLandsBridge
+api-version: '1.21'
+description: Runtime bridge plugin for Lands rental renewal behavior
+authors: [Bonfire]
+softdepend: [Lands, Vault]
+commands:
+  bonfirelandsbridge:
+    description: Main command for bonfirelandsbridge
+    aliases: [blb]
+    permission: bonfire.landsbridge.query
+    usage: /bonfirelandsbridge <myrent|rentinfo|rentlist|status|reload>
+permissions:
+  bonfire.landsbridge.query:
+    default: true
+    description: Allows players to query their rented houses through bonfirelandsbridge
+  bonfire.landsbridge.admin:
+    default: op
+    description: Allows administrative access to bonfirelandsbridge
+    children:
+      bonfire.landsbridge.query: true
