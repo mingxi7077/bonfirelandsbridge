@@ -4,6 +4,7 @@ main: com.bonfire.landsbridge.BonfireLandsBridge
 api-version: '1.21'
 description: Runtime bridge plugin for Lands rental renewal behavior
 authors: [Bonfire]
+website: https://github.com/mingxi7077/bonfirelandsbridge
 softdepend: [Lands, Vault]
 commands:
   bonfirelandsbridge:
