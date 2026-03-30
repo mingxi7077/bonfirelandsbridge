@@ -1,43 +1,39 @@
-﻿# bonfirelandsbridge
+# bonfirelandsbridge
 
-`bonfirelandsbridge` is the runtime bridge layer for Lands rental renewal fixes, trust/untrust fixes, and in-game rental query commands.
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![Platform](https://img.shields.io/badge/platform-Paper%201.21.8-brightgreen)
+![Dependencies](https://img.shields.io/badge/dependencies-Lands%20%2B%20Vault-blueviolet)
+![Status](https://img.shields.io/badge/status-active-success)
 
-## Current state
+`bonfirelandsbridge` is the runtime bridge layer for Lands rental renewals, trust or untrust fixes, and player-facing rental query commands on the Bonfire network.
 
-- Remaining-time renewal bridge enabled
-- Tenant self-heal before renewal/trust/untrust enabled
-- Trust bridge enabled
-- Untrust bridge enabled
-- Player rental query commands enabled
-- Admin rental query commands enabled
+## Highlights
 
-## Current commands
+- Repairs renewal behavior around remaining time and tenant state transitions.
+- Adds runtime self-heal logic before renewal, trust, and untrust actions.
+- Exposes player and admin rental query flows through `/blb`.
+- Keeps the bridge focused on runtime behavior instead of deployment packaging.
 
-Player:
+## Core Commands
 
 - `/blb myrent`
 - `/blb myrent detail`
-
-Admin:
-
 - `/blb rentinfo <player>`
 - `/blb rentlist [page]`
 - `/blb status`
 - `/blb reload`
-- `/blb calc <baseMaxMinutes> <rentMinutes> <passedSeconds>`
-- `/blb runonce`
-- `/blb restore [all|<land name>]`
 
-## Performance strategy
+## Build
 
-- Renewal interception remains event-driven
-- Rental queries collect Lands area data on the main thread only
-- Remaining-time snapshot reads run asynchronously
-- Global rental listing is paged to avoid chat spam and heavy single-response output
+```powershell
+.\mvnw.cmd -q -DskipTests package
+```
 
-## Next milestones
+## Repository Scope
 
-1. Add optional export/report command for rental query results
-2. Add richer admin diagnostics for tenant identity anomalies
-3. Add safer bootstrap validation against the live Lands schema
-4. Add targeted integration tests around query and bridge edge cases
+- Source, runtime config, and operator notes only.
+- Local reverse-engineering workspaces and deployment bundles are excluded from Git.
+
+## License
+
+GPL-3.0
