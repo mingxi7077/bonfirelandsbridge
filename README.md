@@ -8,6 +8,8 @@
 
 `bonfirelandsbridge` is the runtime bridge layer for Lands rental renewals, trust or untrust fixes, and player-facing rental query commands on the Bonfire network.
 
+> Non-commercial source-available. Commercial use requires prior written permission via `mingxi7707@qq.com`.
+
 ## Highlights
 
 - Repairs renewal behavior around remaining time and tenant state transitions.
